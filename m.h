@@ -1,8 +1,10 @@
-
+//student
 // self-referential structure
+#include <string.h>
 struct Node {
    struct Node *pPtr; //พ้อยเต้อชี้ไปที่โหนดก่อนหน้า
-   int data; // each listNode contains a character
+   int id; // each listNode contains a character
+   char name[50];
    struct Node *nextPtr;  // pointer to next node
 }; // end structure listNode
 
@@ -10,14 +12,18 @@ typedef struct Node LLnode; // synonym for struct listNode
 typedef LLnode *LLPtr; // synonym for ListNode*
 
 // prototypes
-
+void alldelete();
 int deletes( LLPtr *sPtr, int value );
 int isEmpty( LLPtr sPtr );
-void insert( LLPtr *sPtr, int value );
+void insert( LLPtr *sPtr, int id, char name[]);
 void printListR( LLPtr currentPtr ); // ปริ้นจากหลังไปหน้า
 void printList( LLPtr currentPtr );
 void instructions( void );
 
+void alldelete()
+{
+   printf("Clear all nodes\n");
+}
 
 // display program instructions to user
 void instructions( void )
