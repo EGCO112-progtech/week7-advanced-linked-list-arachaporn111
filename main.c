@@ -30,15 +30,16 @@ int main( void )
             // if list is not empty
             if ( !isEmpty( startPtr ) ) { 
                printf( "%s", "Enter number to be deleted: " );
-               scanf( "%d", &item );
+               scanf( "%d", &id );
 
                // if character is found, remove it
-               if ( deletes( &startPtr, item ) ) { // remove item
-                  printf( "%d deleted.\n", item );
+               if ( deletes( &startPtr, id, name ) ) { // remove item
+                  printf( "%d deleted.\n", id );
                   printList( startPtr );
+                  printListR( startPtr );
                } // end if
                else {
-                  printf( "%d not found.\n\n", item );
+                  printf( "%d not found.\n\n", id );
                } // end else
             } // end if
             else {
@@ -56,5 +57,6 @@ int main( void )
       scanf( "%u", &choice );
    } // end while
   /* Clear all nodes at the end of nodes*/
+   //alldelete( &startPtr );
    puts( "End of run." );
 } // end main
