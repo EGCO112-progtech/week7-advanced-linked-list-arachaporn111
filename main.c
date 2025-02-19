@@ -31,7 +31,6 @@ int main( void )
             if ( !isEmpty( startPtr ) ) { 
                printf( "%s", "Enter number to be deleted: " );
                scanf( "%d", &id );
-
                // if character is found, remove it
                if ( deletes( &startPtr, id ) ) { // remove item
                   printf( "%d deleted.\n", id );
@@ -45,14 +44,12 @@ int main( void )
             else {
                puts( "List is empty.\n" );
             } // end else
-
             break;
          default:
             puts( "Invalid choice.\n" );
             instructions();
             break;
       } // end switch
-
       printf( "%s", "? " );
       scanf( "%u", &choice );
    } // end while
