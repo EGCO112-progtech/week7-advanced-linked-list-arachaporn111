@@ -1,10 +1,10 @@
-compile: ll_example.c
-	 gcc ll_example.c -o ll
+compile: main.c
+	 gcc main.c -o a
 
 
-run: ll
-	 ./ll
+run: a
+	 ./a
 
 
-clean: ll
-	 rm ll
+clean: a
+	 rm a
