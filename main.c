@@ -33,7 +33,7 @@ int main( void )
                scanf( "%d", &id );
 
                // if character is found, remove it
-               if ( deletes( &startPtr, id, name ) ) { // remove item
+               if ( deletes( &startPtr, id ) ) { // remove item
                   printf( "%d deleted.\n", id );
                   printList( startPtr );
                   printListR( startPtr );
@@ -57,6 +57,6 @@ int main( void )
       scanf( "%u", &choice );
    } // end while
   /* Clear all nodes at the end of nodes*/
-   //alldelete( &startPtr );
+   alldelete( &startPtr );
    puts( "End of run." );
 } // end main
